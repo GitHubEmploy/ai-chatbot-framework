@@ -16,16 +16,16 @@ try:
 except KeyError as e:
     # logging.error('Unknown environment key, defaulting to Development')
     env = 'Development'
-app.config['MONGODB_SETTINGS'] = {
-    "db": "myapp",
+#app.config['MONGODB_SETTINGS'] = {
+    #"db": "myapp",
 app.config.from_object('config.%s' % env)
 app.config.update(
     DEBUG=True,
     TESTING=True,
     TEMPLATES_AUTO_RELOAD=True)
 
-db = MongoEngine(app) 
-
+#db = MongoEngine(app) 
+db = True
 my_signals = Namespace()
 
 from app.agents.controllers import bots
