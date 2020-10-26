@@ -16,15 +16,15 @@ try:
 except KeyError as e:
     # logging.error('Unknown environment key, defaulting to Development')
     env = 'Development'
-
+app.config['MONGODB_SETTINGS'] = {
+    "db": "myapp",
 app.config.from_object('config.%s' % env)
 app.config.update(
     DEBUG=True,
     TESTING=True,
     TEMPLATES_AUTO_RELOAD=True)
 
-#me = MongoEngine(app) 
-db = mongo.get_db()
+db = MongoEngine(app) 
 
 my_signals = Namespace()
 
