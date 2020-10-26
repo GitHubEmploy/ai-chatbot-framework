@@ -3,7 +3,7 @@ from blinker import Namespace
 from flask import Flask,send_from_directory
 from flask_cors import CORS
 from flask_mongoengine import MongoEngine
-
+import mongo
 APP_ROOT = os.path.dirname(os.path.abspath(__file__ + "../../"))
 
 app = Flask(__name__)
