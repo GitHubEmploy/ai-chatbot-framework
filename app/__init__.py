@@ -23,7 +23,7 @@ app.config.update(
     TESTING=True,
     TEMPLATES_AUTO_RELOAD=True)
 
-me = MongoEngine(app) 
+#me = MongoEngine(app) 
 db = mongo.get_db()
 
 my_signals = Namespace()
