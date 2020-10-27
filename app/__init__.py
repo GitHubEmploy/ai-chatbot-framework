@@ -24,8 +24,8 @@ app.config.update(
     TESTING=True,
     TEMPLATES_AUTO_RELOAD=True)
 
-#db = MongoEngine(app) 
-db = True
+db = MongoEngine(app) 
+#db = True
 my_signals = Namespace()
 
 from app.agents.controllers import bots
